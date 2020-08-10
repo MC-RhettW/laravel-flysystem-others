@@ -1,21 +1,21 @@
 <?php
 
-namespace Danhunsaker\Laravel\Flysystem;
+namespace MCDev\Flysystem;
 
-use Danhunsaker\Laravel\Flysystem\FlysystemOtherManager;
 use Danhunsaker\Laravel\Flysystem\FlysystemServiceProvider;
 
-class FlysystemOtherServiceProvider extends FlysystemServiceProvider
+
+class FlysystemSupportServiceProvider extends FlysystemServiceProvider
 {
     /**
      * Bootstrap the application services.
      *
      * @return void
      */
-    public function boot()
+    public function boot ()
     {
-        foreach ((array) $this->app['config']['filesystems.autowrap'] as $drive) {
-            $this->app['filesystem']->disk($drive);
+        foreach ( (array)$this->app['config']['filesystems.autowrap'] as $drive ) {
+            $this->app['filesystem']->disk( $drive );
         }
     }
 
@@ -27,7 +27,7 @@ class FlysystemOtherServiceProvider extends FlysystemServiceProvider
     protected function registerManager()
     {
         $this->app->singleton('filesystem', function () {
-            return new FlysystemOtherManager($this->app);
+            return new FlysystemSupportManager( $this->app );
         });
     }
 
