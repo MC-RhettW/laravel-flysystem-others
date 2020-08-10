@@ -1,22 +1,23 @@
 <?php
 
-namespace Danhunsaker\Laravel\Flysystem;
+namespace MCDev\Flysystem\Support;
 
-use Danhunsaker\Laravel\Flysystem\FlysystemManager;
 use Illuminate\Support\Arr;
 use Log;
+use MCDev\Flysystem\FlysystemManager;
 
-class FlysystemOtherManager extends FlysystemManager
+
+class FlysystemSupportManager extends FlysystemManager
 {
     /**
      * {@inheritdoc}
      */
-    public function __construct($app)
+    public function __construct ( $app )
     {
-        parent::__construct($app);
-
-        if (class_exists('\Mhetreramesh\Flysystem\BackblazeAdapter')) {
-            $this->extend('backblaze', function ($app, $config) {
+        parent::__construct( $app );
+        
+        if ( class_exists( '\Mhetreramesh\Flysystem\BackblazeAdapter' ) ) {
+            $this->extend( 'backblaze', function ( $app, $config ) {
                 return $this->createFlysystem(new \Mhetreramesh\Flysystem\BackblazeAdapter(new \BackblazeB2\Client($config['account_id'], $config['application_key']), $config['bucket']), $config);
             });
         }

@@ -1,17 +1,46 @@
 {
-    "name": "danhunsaker/laravel-flysystem-others",
-    "description": "Automatically registers every third-party Flysystem adapter it recognizes as a Laravel Filesystem Driver.",
-    "keywords": ["laravel", "flysystem"],
+    "name": "mcdev/laravel-flysystem-support",
+    "description": "Automatically registers supported third-party Flysystem adapters as Laravel Filesystem Drivers",
+    "keywords": [
+        "laravel",
+        "dev",
+        "console",
+        "filesystem",
+        "flysystem",
+        "drivers",
+        "support",
+        "library"
+    ],
+    "type": "library",
     "license": "MIT",
-    "authors": [{
-        "name": "Daniel Hunsaker",
-        "email": "danhunsaker@gmail.com"
-    }],
+    "support": {
+        "issues": "https://collab.devteam.mankatoclinic.com/",
+        "source": "https://github.com/MC-RhettW/laravel-flysystem-others"
+    },
+    "authors": [
+        {
+            "name": "Rhett Waldock",
+            "email": "RhettW@MankatoClinic.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Daniel Hunsaker",
+            "email": "danhunsaker@gmail.com",
+            "role": "Developer (upstream)"
+        }
+    ],
+    "repositories": [
+        {
+            "name": "mcdev/laravel-flysystem-service",
+            "type": "vcs",
+            "url": "https://github.com/MC-RhettW/laravel-flysystem-service.git"
+        }
+    ],
     "require": {
-        "illuminate/support": "^5.0 || ^6.0",
-        "illuminate/filesystem": "^5.0 || ^6.0",
+        "illuminate/support": ">=5.0",
+        "illuminate/filesystem": ">=5.0",
         "league/flysystem": "^1.0",
-        "danhunsaker/laravel-flysystem-service": "^1.1"
+        "mcdev/laravel-flysystem-service": ">=1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5"
@@ -67,7 +96,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Danhunsaker\\Laravel\\Flysystem\\": "src/"
+            "MCDev\\Flysystem\\Support\\": "src/"
         }
     },
     "extra": {
@@ -76,10 +105,10 @@
         },
         "laravel": {
             "providers": [
-                "Danhunsaker\\Laravel\\Flysystem\\FlysystemOtherServiceProvider"
+                "MCDev\\Flysystem\\Support\\FlysystemSupportServiceProvider"
             ],
             "dont-discover": [
-                "danhunsaker/laravel-flysystem-service"
+                "mcdev/laravel-flysystem-service"
             ]
         }
     }
