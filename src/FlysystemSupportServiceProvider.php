@@ -1,12 +1,18 @@
 <?php
 
 namespace MCDev\Flysystem\Support;
-
 use MCDev\Flysystem\FlysystemServiceProvider;
 
 
+/**
+ * Class FlysystemSupportServiceProvider
+ *
+ * @property Illuminate\Foundation\Application|object app Application instance / service container
+ * @package MCDev\Flysystem\Support
+ */
 class FlysystemSupportServiceProvider extends FlysystemServiceProvider
 {
+    
     /**
      * Bootstrap the application services.
      *
@@ -14,9 +20,8 @@ class FlysystemSupportServiceProvider extends FlysystemServiceProvider
      */
     public function boot ()
     {
-        foreach ( (array)$this->app['config']['filesystems.autowrap'] as $drive ) {
+        foreach ( (array)$this->app['config']['filesystems.autowrap'] as $drive )
             $this->app['filesystem']->disk( $drive );
-        }
     }
 
     /**
