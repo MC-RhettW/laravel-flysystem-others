@@ -21,7 +21,7 @@
         {
             "name": "Rhett Waldock",
             "email": "RhettW@MankatoClinic.com",
-            "role": "Maintainer"
+            "role": "Maintainer (fork)"
         },
         {
             "name": "Daniel Hunsaker",
@@ -96,7 +96,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "MCDev\\Flysystem\\Support\\": "src/"
+            "MCDev\\FlysystemSupport\\": "src/"
         }
     },
     "extra": {

@@ -1,14 +1,15 @@
 <?php
 
-namespace MCDev\Flysystem\Support;
+namespace MCDev\FlysystemSupport;
 
 use Illuminate\Support\Arr;
 use Log;
 use MCDev\Flysystem\FlysystemManager;
 
 
-class FlysystemSupportManager extends FlysystemManager
-{
+class FlysystemSupportManager
+  extends FlysystemManager {
+    
     /**
      * {@inheritdoc}
      */

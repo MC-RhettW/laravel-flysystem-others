@@ -1,6 +1,7 @@
 <?php
 
-namespace MCDev\Flysystem\Support;
+namespace MCDev\FlysystemSupport;
+
 use MCDev\Flysystem\FlysystemServiceProvider;
 
 
@@ -10,7 +11,8 @@ use MCDev\Flysystem\FlysystemServiceProvider;
  * @property Illuminate\Foundation\Application|object app Application instance / service container
  * @package MCDev\Flysystem\Support
  */
-class FlysystemSupportServiceProvider extends FlysystemServiceProvider
+class FlysystemSupportServiceProvider
+  extends FlysystemServiceProvider
 {
     
     /**
