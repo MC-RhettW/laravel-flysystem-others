@@ -107,7 +107,7 @@
         },
         "laravel": {
             "providers": [
-                "MCDev\\Flysystem\\Support\\FlysystemSupportServiceProvider"
+                "MCDev\\FlysystemSupport\\FlysystemSupportServiceProvider"
             ],
             "dont-discover": [
                 "mcdev/laravel-flysystem-service"
