@@ -37,8 +37,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "^5.0",
-        "illuminate/filesystem": "^5.0",
+        "illuminate/support": ">=5.0",
+        "illuminate/filesystem": ">=5.0",
         "league/flysystem": "^1.0",
         "mcdev/laravel-flysystem-service": "dev-master",
         "php": "^7.2 || ^8.0"
